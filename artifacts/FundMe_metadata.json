@@ -7,33 +7,71 @@
 		"abi": [
 			{
 				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "notOwner",
+				"type": "error"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [],
+				"name": "MINIMUN_USD",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "funder",
+						"type": "address"
+					}
+				],
+				"name": "addressToAmountFunded",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountFunded",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "fund",
 				"outputs": [],
 				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "getConversionRate",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getPrice",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "getVersion",
-				"outputs": [
+				"inputs": [
 					{
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"name": "funders",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
@@ -41,16 +79,27 @@
 			},
 			{
 				"inputs": [],
-				"name": "minimumUSD",
+				"name": "i_owner",
 				"outputs": [
 					{
-						"internalType": "uint256",
+						"internalType": "address",
 						"name": "",
-						"type": "uint256"
+						"type": "address"
 					}
 				],
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -89,11 +138,19 @@
 			]
 		},
 		"FundMe.sol": {
-			"keccak256": "0x556685c3e2f21355e48d13f759af2aaf0d2d0b9c2b832b9360ebfb7a8a0166ec",
+			"keccak256": "0x21820be42bf95074b5b3585759e558376696ee02b945bbfb5170378bda218d7b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2cd98003b58cfc013ccdcc11b095f45903891e85fdb1b7acb12e29a82c8d3cbe",
-				"dweb:/ipfs/QmbTi4syKphmyzYkUjKDS28ghrVrHqjHjZozFWBGpSYqJ4"
+				"bzz-raw://7db4743ac78574b74841da498adb952ee833f379dd332e1c2580cf3d85e28045",
+				"dweb:/ipfs/QmaBvyqU6whzddnxapcfGSBRvq9mgqASWFu6fLjM2j91Kz"
+			]
+		},
+		"PriceConvertor.sol": {
+			"keccak256": "0x2f1aa6d44c7c9f3fde0fe2ff10eb9eaad6e032395c432ed17cd8deeb4f421755",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://77d74f6679da7d088d91c76c5a624755e3ef3b497447daefeb4d791b13cf9c75",
+				"dweb:/ipfs/QmSiKZ2TuJCeWtMxxgYF4ZkLeznWfuQBnUCWwADCjRNZ7U"
 			]
 		}
 	},
